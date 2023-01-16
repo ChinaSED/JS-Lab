@@ -1,6 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+<audio id="audio" src="taskCompleted.mp3"></audio>
 
 <title>久坐提醒</title>
 <div class="container">
@@ -16,13 +17,51 @@
     <p class="float-end">15 minutes</p>
 </div>
 <br/>
-<div class="container my-3">
-    <div class="btn btn-secondary" id="2">Reset</div>
+<div class="container text-center">
+    <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <label for="exampleDataList" class="form-label">设置时间</label>
+        <input class="form-control" type="text" list="datalistOptions" id="exampleDataList" placeholder="15">
+        <datalist id="datalistOptions">
+            <option value=1>
+            <option value=5>
+            <option value=15>
+            <option value=25>
+            <option value=50>
+        </datalist>
+    </div>
+    <div class="col-3"></div>
+    </div>
 </div>
+<div class="container my-3 text-center">
+    <div class="btn-group">
+        <div class="btn btn-secondary float-start" data-bs-toggle="modal" data-bs-target="#exampleModal">Reset</div>
+        <button class="btn btn-primary float-end" id="3">Start</button>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">确认</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">确定要重置计时器吗？</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" id="2" data-bs-dismiss="modal">确认</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 <script>
     const progress = document.getElementById('1');
+    const audio = document.getElementById('audio');
+    const time = document.getElementById('exampleDataList');
     function setProgress(n){
         progress.style.setProperty('width',n+'%');
     }
@@ -30,19 +69,32 @@
         return new Promise(resolve => setTimeout(() =>resolve(), ms));
     };
     let timer = 15;
+    time.addEventListener('change',setTimer);
+    function setTimer(){
+        timer=Number(time.value);
+        ms = timer*60*1000/slices
+        delta = 100/slices
+    }
     let slices = 1000;
     let ms = timer*60*1000/slices;
     let delta = 100/slices;
     let i = 100;
+    let flag = true;
     async function main(){
-        for(;i>=0;i-=delta){
+        for(;i>=0&&flag;i-=delta){
             setProgress(i);
             await wait(ms);
         }
-        alert('rest!')
+        audio.play()
+        start.disabled = false
     }
-    main();
     const reset = document.getElementById('2');
-    function resetMain(){if(i>0){i=100;}else{i=100;main()}}
+    function resetMain(){flag=false;setProgress(100);i=100;start.disabled=false}
     reset.addEventListener('click', resetMain);
+    const start = document.getElementById('3');
+    function startMain(){flag=true;i=100;main();start.disabled=true;}
+    start.addEventListener('click', startMain);
+
+    
+
 </script>
