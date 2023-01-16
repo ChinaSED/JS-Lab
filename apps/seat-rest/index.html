@@ -14,7 +14,7 @@
         <div class="progress-bar" id="1" style="width: 100%;"></div>
     </div>
     <p class="float-start">Your health ↑</p>
-    <p class="float-end">15 minutes</p>
+    <p class="float-end" id="change">15 minutes</p>
 </div>
 <br/>
 <div class="container text-center">
@@ -62,6 +62,7 @@
     const progress = document.getElementById('1');
     const audio = document.getElementById('audio');
     const time = document.getElementById('exampleDataList');
+    const change = document.getElementById('change');
     function setProgress(n){
         progress.style.setProperty('width',n+'%');
     }
@@ -72,8 +73,13 @@
     time.addEventListener('change',setTimer);
     function setTimer(){
         timer=Number(time.value);
-        ms = timer*60*1000/slices
-        delta = 100/slices
+        ms = timer*60*1000/slices;
+        delta = 100/slices;
+        if(timer>1){
+        change.innerText = timer+' minutes';}
+        else{
+        change.innerText = timer+' minute';
+        }
     }
     let slices = 1000;
     let ms = timer*60*1000/slices;
