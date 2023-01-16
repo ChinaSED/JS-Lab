@@ -4,9 +4,10 @@
 
 <title>猜数游戏</title>
 
-<div class="container text-center">
-    <a href="../../index.html" class="btn btn-secondary my-3">返回</a>
-    <h1>猜数游戏</h1>
+<div class="container">
+    <a href="../../index.html" class="btn btn-secondary mt-3">返回</a>
+    <h1 class="text-center">猜数游戏</h1>
+
     <p>最多 10 次尝试，猜出一个位于 [1,100] 的随机数。</p>
 
     <div class="form">
@@ -16,10 +17,10 @@
       <input type="submit" value="提交" class="guessSubmit" />
     </div>
 
-    <div class="resultParas">
-      <p class="guesses"></p>
-      <p class="lastResult"></p>
-      <p class="lowOrHi"></p>
+    <div class="resultParas text-center">
+      <p class="guesses mb-0"></p>
+      <p class="lowOrHi mb-0"></p>
+      <p class="lastResult mb-0"></p>
     </div>
 </div>
 
@@ -73,6 +74,7 @@
     guessSubmit.disabled = true;
     resetButton = document.createElement('button');
     resetButton.textContent = '开始新游戏';
+    resetButton.className = 'btn btn-primary m-3';
     document.body.append(resetButton);
     resetButton.addEventListener('click', resetGame);
     }
