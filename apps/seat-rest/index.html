@@ -1,0 +1,48 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+
+<title>久坐提醒</title>
+<div class="container">
+    <a href="../../index.html" class="btn btn-secondary my-3">返回</a>
+    <h1 class="text-center">久坐提醒</h1>
+</div>
+
+<div class="container my-3">
+    <div class="progress" role="progressbar" style="transform:rotate">
+        <div class="progress-bar" id="1" style="width: 100%;"></div>
+    </div>
+    <p class="float-start">Your health ↑</p>
+    <p class="float-end">15 minutes</p>
+</div>
+<br/>
+<div class="container my-3">
+    <div class="btn btn-secondary" id="2">Reset</div>
+</div>
+
+
+<script>
+    const progress = document.getElementById('1');
+    function setProgress(n){
+        progress.style.setProperty('width',n+'%');
+    }
+    function wait(ms) {
+        return new Promise(resolve => setTimeout(() =>resolve(), ms));
+    };
+    let timer = 15;
+    let slices = 1000;
+    let ms = timer*60*1000/slices;
+    let delta = 100/slices;
+    let i = 100;
+    async function main(){
+        for(;i>=0;i-=delta){
+            setProgress(i);
+            await wait(ms);
+        }
+        alert('rest!')
+    }
+    main();
+    const reset = document.getElementById('2');
+    function resetMain(){if(i>0){i=100;}else{i=100;main()}}
+    reset.addEventListener('click', resetMain);
+</script>

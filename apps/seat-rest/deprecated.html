@@ -1,0 +1,49 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+
+<title>久坐提醒</title>
+<div class="container">
+    <a href="../../index.html" class="btn btn-secondary my-3">返回</a>
+    <h1 class="text-center">久坐提醒</h1>
+</div>
+
+<div class="d-flex justify-content-center m-3">
+    <div class="clock">
+    </div>
+</div>
+
+<style>
+    :root{
+        --x: 0%;
+    }
+    .clock {
+    color: black;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: conic-gradient(#ddff5c 0%, #28d4c3 calc(var(--x)*0.5), #85ea8e var(--x), #1d335c var(--x), #1d335c 100%);
+    -webkit-mask: radial-gradient(transparent 44px, #000 45px);
+}
+</style>
+
+<script>
+    const pp = document.documentElement.style;
+    function wait(ms) {
+        return new Promise(resolve => setTimeout(() =>resolve(), ms));
+    };
+
+    function setProgress(parcent){
+        pp.setProperty('--x', parcent + '%');
+    }
+    const sleep = (delay) =>new Promise((resolve) => setTimeout(resolve, delay));
+    
+    async function main(){
+        for(let i=0;i<=100;i++){
+            setProgress(i);
+            await sleep(50);
+        }
+    }
+
+    main()
+</script>
