@@ -10,36 +10,35 @@
 </div>
 
 <div class="container my-3">
-    <div class="progress" role="progressbar" style="transform:rotate">
+    <div class="progress" role="progressbar">
         <div class="progress-bar" id="1" style="width: 100%;"></div>
     </div>
     <p class="float-start">Your health ↑</p>
     <p class="float-end" id="change">15 minutes</p>
 </div>
 <br/>
-<div class="container text-center">
-    <div class="row">
-    <div class="col-3"></div>
-    <div class="col-6">
-        <label for="exampleDataList" class="form-label">设置时间</label>
-        <input class="form-control" type="text" list="datalistOptions" id="exampleDataList" placeholder="15">
-        <datalist id="datalistOptions">
-            <option value=1>
-            <option value=5>
-            <option value=15>
-            <option value=25>
-            <option value=50>
-        </datalist>
+<div class="container">
+
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="d-flex align-items-baseline">
+            <label for="exampleDataList" class="form-label">设置时间：</label>
+            <input class="form-control w-25" type="text" list="datalistOptions" id="exampleDataList" placeholder="15">
+            <datalist id="datalistOptions">
+                <option value=1>
+                <option value=5>
+                <option value=15>
+                <option value=25>
+                <option value=50>
+            </datalist>
+        </div>
+        <div class="btn-group">
+            <div class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Reset</div>
+            <button class="btn btn-primary" id="3">Start</button>
+        </div>
     </div>
-    <div class="col-3"></div>
-    </div>
+    
 </div>
-<div class="container my-3 text-center">
-    <div class="btn-group">
-        <div class="btn btn-secondary float-start" data-bs-toggle="modal" data-bs-target="#exampleModal">Reset</div>
-        <button class="btn btn-primary float-end" id="3">Start</button>
-    </div>
-</div>
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
