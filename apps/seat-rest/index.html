@@ -11,7 +11,9 @@
 
 <div class="container my-3">
     <div class="progress" role="progressbar">
-        <div class="progress-bar" id="1" style="width: 100%;"></div>
+        <div class="progress-bar" id="1" style="width: 100%;">
+            900s
+        </div>
     </div>
     <p class="float-start">Your health ↑</p>
     <p class="float-end" id="change">15 minutes</p>
@@ -87,6 +89,7 @@
     let flag = true;
     async function main(){
         for(;i>=0&&flag;i-=delta){
+            progress.innerText = Math.floor(i/100 * timer*60)+'s';
             setProgress(i);
             await wait(ms);
         }
