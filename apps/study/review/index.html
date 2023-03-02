@@ -232,7 +232,11 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
 <ul>
 <li>边际分布 N(a1, <span class="math inline">\(σ_1^2\)</span>)</li>
 </ul></li>
-<li>🚩ξ,η独立 ⇔ (ξ,η)密度函数为<span class="math inline">\(p_ξ(x)\)</span>·<span class="math inline">\(p_η(x)\)</span> ⇔ F(x,y)=<span class="math inline">\(F_ξ(x)\)</span>·<span class="math inline">\(F_η(x)\)</span></li>
+<li>🚩ξ,η独立 ⇔ (ξ,η)密度函数p(x,y)=<span class="math inline">\(p_ξ(x)\)</span>·<span class="math inline">\(p_η(y)\)</span> ⇔ F(x,y)=<span class="math inline">\(F_ξ(x)\)</span>·<span class="math inline">\(F_η(y)\)</span></li>
+<li>由两个独立分布经变换计算二维分布
+<ul>
+<li><span class="math inline">\(p_{ξ+η}(u,v)\)</span>=<span class="math inline">\(p_ξ(x(u,v))\)</span>·<span class="math inline">\(p_η(y(u,v))\)</span><span class="math inline">\(|J|\)</span></li>
+</ul></li>
 </ul>
 <h5 id="分布运算">3.4 分布运算</h5>
 <ul>
@@ -248,7 +252,7 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
 <li><span class="math inline">\(\Gamma\)</span>分布 <span class="math inline">\(χ^2\)</span>分布</li>
 <li>n个b(1,p)=b(n,p) n个指数分布Exp(λ)=<span class="math inline">\(\Gamma\)</span>(n,λ)</li>
 </ul></li>
-<li>商(变量变换法)</li>
+<li>商(变量变换法)(🚩<strong>例3.18</strong>)</li>
 <li>max,min分布</li>
 <li>🚩<strong>变量变换法</strong>(例3.17) 与二重积分一样</li>
 </ul></li>
@@ -328,8 +332,8 @@ E(<span class="math inline">\(e^{itξ}\)</span>)</li>
 <ul>
 <li>条件:特征积分绝对收敛(<span class="math inline">\(\int_{-∞}^{+∞}|φ(t)|dt&lt;+∞\)</span>)</li>
 <li>p(x)=<span class="math inline">\(\frac{1}{2π}\)</span><span class="math inline">\(\int_{-∞}^{+∞}e^{-itx}φ(t)dt\)</span></li>
-<li>即证明一对变换φ(t) = <span class="math inline">\(\int
-e^{itx}p(x)dx\)</span></li>
+<li>恰好和φ(t)=<span class="math inline">\(\int
+e^{itx}p(x)dx\)</span>构成一对变换</li>
 </ul></li>
 <li>唯一性 特征函数⇔分布函数</li>
 </ul></li>
