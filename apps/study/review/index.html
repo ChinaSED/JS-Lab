@@ -290,9 +290,50 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
 <li>离开期望的程度 概率描述</li>
 </ul></li>
 <li>关于a点的k阶矩(不怎么考)</li>
-<li>协方差矩阵</li>
+<li>协方差矩阵(不怎么考)</li>
 </ul></li>
-<li>3.6</li>
+<li>3.6
+<ul>
+<li>条件(不怎么考)
+<ul>
+<li>条件分布</li>
+<li>条件期望</li>
+</ul></li>
+<li>线性回归(不怎么考)</li>
+</ul></li>
+<li>3.7 特征函数
+<ul>
+<li>φ(t) = <span class="math inline">\(\int e^{itx}p(x)dx\)</span> =
+E(<span class="math inline">\(e^{itξ}\)</span>)</li>
+<li>常见(要会求)
+<ul>
+<li>单点分布P(ξ=a)=1 φ(t)=<span class="math inline">\(e^{iat}\)</span></li>
+<li>二项分布b(n,p) φ(t)=<span class="math inline">\((pe^{it}+q)^n\)</span></li>
+<li>泊松分布P(λ) φ(t)=<span class="math inline">\(e^{λ(e^{it}-1)}\)</span></li>
+<li>均匀分布u(0~1) φ(t)=<span class="math inline">\(\frac{e^{it}-1}{it}\)</span></li>
+<li>指数分布Exp(λ) φ(t)=<span class="math inline">\((1-\frac{it}{λ})^{-1}\)</span></li>
+<li>(直接记)正态分布N(μ,σ²) φ(t)=<span class="math inline">\(\sqrt{2π}\)</span></li>
+</ul></li>
+<li>运算
+<ul>
+<li><span class="math inline">\(φ_{ax+b}(t)\)</span>=E(<span class="math inline">\(e^{i(ax+b)t}\)</span>)=<span class="math inline">\(e^{ibt}φ(at)\)</span></li>
+<li><strong>(独立求和)</strong><span class="math inline">\(φ_{x+y}(t)=φ_{x}(t)·φ_{y}(t)\)</span></li>
+<li><strong>(k阶矩)</strong><span class="math inline">\(φ^{(k)}(0)=i^{k}E(ξ^k)\)</span></li>
+</ul></li>
+<li>逆转公式
+<ul>
+<li>公式 感觉算不出来</li>
+<li><strong>(推论)连续函数傅里叶逆变换版(感觉会考)</strong>
+<ul>
+<li>条件:特征积分绝对收敛(<span class="math inline">\(\int_{-∞}^{+∞}|φ(t)|dt&lt;+∞\)</span>)</li>
+<li>p(x)=<span class="math inline">\(\frac{1}{2π}\)</span><span class="math inline">\(\int_{-∞}^{+∞}e^{-itx}φ(t)dt\)</span></li>
+<li>即证明一对变换φ(t) = <span class="math inline">\(\int
+e^{itx}p(x)dx\)</span></li>
+</ul></li>
+<li>唯一性 特征函数⇔分布函数</li>
+</ul></li>
+</ul></li>
+<li>4.1 大数定律</li>
 </ul></li>
 </ul>
 </body>
