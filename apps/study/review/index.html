@@ -334,5 +334,43 @@ e^{itx}p(x)dx\)</span></li>
 </ul></li>
 </ul>
 <h5 id="大数定律">4.1 大数定律</h5>
+<p>n→∞时, P(…&lt;ε)=1的情况</p>
+<ul>
+<li>(引入)伯努利定理
+<ul>
+<li>n重伯努利事件A的发生次数<span class="math inline">\(μ_n\)</span></li>
+<li><span class="math inline">\(P(|\frac{μ_n}{n}-p|&lt;ε)=1\)</span></li>
+<li>依概率收敛 <span class="math inline">\(\frac{μ_n}{n}\stackrel{P}{\rightarrow}p\)</span></li>
+</ul></li>
+<li>(条件弱)切比雪夫大数定理
+<ul>
+<li>条件: 两两不相关 方差有界</li>
+<li><span class="math inline">\(\frac{\sum
+ξ_i}{n}\stackrel{P}{\rightarrow}\frac{\sum E(ξ_i)}{n}\)</span></li>
+<li>含义: 随机变量序列的均值收敛于它的期望</li>
+</ul></li>
+<li>(条件更弱)马尔可夫大数定律
+<ul>
+<li>条件: <span class="math inline">\(\frac{1}{n^2}D(\sum
+ξ_i^2)\)</span>→0</li>
+<li><span class="math inline">\(\frac{\sum
+ξ_i}{n}\stackrel{P}{\rightarrow}\frac{\sum E(ξ_i)}{n}\)</span></li>
+</ul></li>
+<li>(无方差要求)辛钦大数定律
+<ul>
+<li>条件: 独立同分布 记期望a</li>
+<li><span class="math inline">\(\frac{\sum
+ξ_i}{n}\stackrel{P}{\rightarrow}a\)</span></li>
+<li>注: 结论都类似, 但是条件是另一个方向</li>
+</ul></li>
+</ul>
+<h5 id="收敛性">4.2 收敛性</h5>
+<ul>
+<li>依概率收敛(可推出弱收敛)</li>
+<li>弱收敛(按分布收敛)</li>
+<li>依概率收敛于常数 ⇔ 分布函数列弱收敛于退化分布</li>
+<li><span class="math inline">\(\{F_n(x)\}\)</span>弱收敛于<span class="math inline">\(F(x)\)</span> ⇔ <span class="math inline">\(\{φ_n(t)\}\)</span>收敛于<span class="math inline">\(φ(t)\)</span></li>
+</ul>
+<h5 id="中心极限">4.3 中心极限</h5>
 </body>
 </html>
