@@ -1,0 +1,31 @@
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<script src="https://unpkg.com/vue@next"></script>
+<link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+<script src="https://unpkg.com/element-plus"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+<div id="app" style="text-align: center">
+  <el-space direction="vertical">
+    <el-input v-model="message"></el-input>
+    <el-button @click="fire">{{ message }}</el-button>
+  </el-space>
+</div>
+
+<script>
+  const App = {
+    setup() {
+      const message = Vue.ref('')
+      const confetti = new JSConfetti()
+
+      function fire(){
+        confetti.addConfetti()
+      }
+
+      return {  
+        message,
+        fire
+      }
+    }
+  }
+  Vue.createApp(App).use(ElementPlus).mount('#app')
+</script>
