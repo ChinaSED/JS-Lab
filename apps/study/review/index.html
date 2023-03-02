@@ -200,11 +200,12 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
 <header id="title-block-header">
 <h1 class="title">期末复习</h1>
 </header>
+<p>🚩: 重点</p>
 <h5 id="分布">3.1 分布</h5>
 <ul>
 <li>分布函数 F(x) 定义 性质</li>
 <li>泊松分布 离散型</li>
-<li>🚩 <strong>[[指数分布]]</strong> 连续型 需要记忆
+<li>🚩 <strong>[[指数分布]]</strong> 连续型
 <ul>
 <li>和的求法</li>
 <li>实例应用</li>
@@ -336,7 +337,7 @@ e^{itx}p(x)dx\)</span></li>
 <h5 id="大数定律">4.1 大数定律</h5>
 <p>n→∞时, P(…&lt;ε)=1的情况</p>
 <ul>
-<li>(引入)伯努利定理
+<li>(特例)伯努利定理
 <ul>
 <li>n重伯努利事件A的发生次数<span class="math inline">\(μ_n\)</span></li>
 <li><span class="math inline">\(P(|\frac{μ_n}{n}-p|&lt;ε)=1\)</span></li>
@@ -367,10 +368,15 @@ e^{itx}p(x)dx\)</span></li>
 <h5 id="收敛性">4.2 收敛性</h5>
 <ul>
 <li>依概率收敛(可推出弱收敛)</li>
-<li>弱收敛(按分布收敛)</li>
+<li>弱收敛(按分布收敛) 在每个连续点收敛</li>
 <li>依概率收敛于常数 ⇔ 分布函数列弱收敛于退化分布</li>
 <li><span class="math inline">\(\{F_n(x)\}\)</span>弱收敛于<span class="math inline">\(F(x)\)</span> ⇔ <span class="math inline">\(\{φ_n(t)\}\)</span>收敛于<span class="math inline">\(φ(t)\)</span></li>
 </ul>
-<h5 id="中心极限">4.3 中心极限</h5>
+<h5 id="中心极限独立同分布">4.3 中心极限(独立同分布)</h5>
+<p>由大数定律知道随机变量列均值收敛后, 继续研究服从什么分布 - 莱维定理 -
+条件: 独立同分布 - 原理: 随机变量和<span class="math inline">\(∑Xi\sim
+N(nμ，nσ^2)\)</span>, 进行标准化 -
+(Levi-Lindeberg的B(1,p)情况)拉普拉斯定理 - 条件: <span class="math inline">\(X_i \sim B(n,p)\)</span></p>
+<h5 id="中心极限独立非同分布">4.4 中心极限(独立非同分布)*</h5>
 </body>
 </html>
