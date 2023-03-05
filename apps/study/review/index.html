@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>期末复习</title>
+  <title>考试总结</title>
   <style>
 html {
 line-height: 1.5;
@@ -198,198 +198,114 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">期末复习</h1>
+<h1 class="title">考试总结</h1>
 </header>
-<p>🚩: 重点</p>
-<h5 id="分布">3.1 分布</h5>
+<h4 id="战略">战略</h4>
+<p>总结试卷考点 ⇔总结提炼PPT ⇔形成速查表</p>
+<h4 id="试卷考点">试卷考点</h4>
 <ul>
-<li>分布函数 F(x) 定义 性质</li>
-<li>泊松分布 离散型</li>
-<li>🚩 <strong>[[指数分布]]</strong> 连续型
+<li>描述性
 <ul>
-<li>和的求法</li>
-<li>实例应用</li>
+<li>平均数 众数 中位数 误用</li>
+<li>几何平均数(利率) 算术平均数 误用</li>
+<li>左偏的定义(存在极端较小值拉低均值,较中位数小)</li>
+<li>方差</li>
+<li>离散系数</li>
+<li>正态分布 一个标准差内的占比</li>
 </ul></li>
+<li>图表
+<ul>
+<li>表达的信息
+<ul>
+<li>从高到低</li>
+<li>前面超过… 后面较小</li>
+</ul></li>
+<li>如何完善 +
+<ul>
+<li>分类多少</li>
+<li>标题图例</li>
+<li>横纵坐标</li>
+<li>具体数值 小数位数</li>
+<li>颜色选择</li>
+<li>均值中位数折线</li>
+</ul></li>
+<li>选择合适的图表 +
+<ul>
+<li>直方图(分类数据)</li>
+<li>分组箱线图</li>
+<li>折线图</li>
+<li>帕累托图(分类排序)</li>
+<li>环形图(分类比例)</li>
+</ul></li>
+</ul></li>
+<li>实验设计 +
+<ul>
+<li>因素
+<ul>
+<li>何种显著</li>
+<li>交互效应 混杂</li>
+<li>背景因子</li>
+<li>相关不一定有因果性</li>
+</ul></li>
+</ul></li>
+<li><strong>方差分析</strong> ++++
+<ul>
+<li>因子 水平</li>
+<li>补全 ++</li>
+<li>因素和交互是否有显著性影响</li>
+<li>要不要添加交互效应</li>
+<li>自由度 均方 F P +++</li>
+<li>考虑额外因素</li>
+<li>验证性
+<ul>
+<li>正态性检验</li>
+<li>同方差检验</li>
+<li>独立性检验</li>
+</ul></li>
+</ul></li>
+<li>抽样调查 +
+<ul>
+<li>样本框</li>
+<li>问题设计</li>
+<li>敏感性</li>
+<li>抽样方法 ++</li>
+<li>抽样方式</li>
+<li>数据真实性</li>
+<li>误差控制</li>
+<li>因素混杂</li>
+<li>调查方法</li>
+</ul></li>
+<li>假设检验 +++
+<ul>
+<li>原假设 +++</li>
+<li>备择假设 +++</li>
+<li>结论</li>
+</ul></li>
+<li><span class="math inline">\(\chi^2\)</span> 独立性检验 +
+<ul>
+<li>观测值 期望值 卡方值<span class="math inline">\(\frac{(f_0+f_e)^2}{f_e}\)</span></li>
+<li>自由值df P值</li>
+<li>α取0.1 自由度取2 分布临界点</li>
+</ul></li>
+<li>线性回归
+<ul>
+<li>拟合系数含义</li>
+<li>显著性水平
+<ul>
+<li>进行假设检验计算</li>
+</ul></li>
+</ul></li>
+<li>程序题
+<ul>
+<li>穷举走法 +</li>
+<li>随机模拟 ++</li>
+</ul></li>
+<li><del>🤔19.5 时间序列分析？(不考🙅‍)</del></li>
+<li>🤔18.3 综合应用题(12.20的网课)</li>
+<li>🤔18.4 假设检验的两类错误</li>
 </ul>
-<h5 id="密度">3.2 密度</h5>
-<ul>
-<li>密度函数 p(x) 定义 性质</li>
-<li>🚩正态分布N(μ, σ²) <strong>转换</strong> 标准正态分布Φ(<span class="math inline">\(\frac{x-μ}{σ}\)</span>)</li>
-</ul>
-<h5 id="多维">3.3 多维</h5>
-<ul>
-<li>二维分布函数 F(x,y) 定义 性质
-<ul>
-<li>边际分布 <span class="math inline">\(F_ξ\)</span>=F(x,+∞)</li>
-</ul></li>
-<li>二维密度函数 p(x,y)
-<ul>
-<li>求二重积分</li>
-<li>边际密度 <span class="math inline">\(p_ξ\)</span>=<span class="math inline">\(F&#39;_ξ(x)\)</span></li>
-</ul></li>
-<li>二维正态分布 N(a1, a2, <span class="math inline">\(σ_1^2\)</span>,
-<span class="math inline">\(σ_2^2\)</span>, ρ)
-<ul>
-<li>边际分布 N(a1, <span class="math inline">\(σ_1^2\)</span>)</li>
-</ul></li>
-<li>🚩ξ,η独立 ⇔ (ξ,η)密度函数p(x,y)=<span class="math inline">\(p_ξ(x)\)</span>·<span class="math inline">\(p_η(y)\)</span> ⇔ F(x,y)=<span class="math inline">\(F_ξ(x)\)</span>·<span class="math inline">\(F_η(y)\)</span></li>
-<li>由两个独立分布经变换计算二维分布
-<ul>
-<li><span class="math inline">\(p_{ξ+η}(u,v)\)</span>=<span class="math inline">\(p_ξ(x(u,v))\)</span>·<span class="math inline">\(p_η(y(u,v))\)</span><span class="math inline">\(|J|\)</span></li>
-</ul></li>
-</ul>
-<h5 id="分布运算">3.4 分布运算</h5>
-<ul>
-<li>f(x)严格单调, 反函数连续可微 可求变换后的密度函数</li>
-<li>和 <span class="math inline">\(p_{(ξ+η)}(y)\)</span>=<span class="math inline">\(\int p_ξ(y-x)p_η(x) dx\)</span>
-<ul>
-<li>卷积 <span class="math inline">\(p_{(ξ+η)}\)</span>=<span class="math inline">\(p_ξ(y-x)*p_η(x)\)</span></li>
-<li>常用结论(独立时)
-<ul>
-<li>二项分布 b(n,p)+b(m,p)=b(n+m,p)</li>
-<li>泊松分布 P(<span class="math inline">\(λ_1\)</span>)+P(<span class="math inline">\(λ_2\)</span>)=P(<span class="math inline">\(λ_1\)</span>+<span class="math inline">\(λ_2\)</span>)</li>
-<li>正态分布 N(<span class="math inline">\(μ_1\)</span>, <span class="math inline">\(σ_1^2\)</span>)+N(<span class="math inline">\(μ_2\)</span>, <span class="math inline">\(σ_2^2\)</span>)=N(<span class="math inline">\(μ_1+μ_2\)</span>, <span class="math inline">\(σ_1^2+σ_2^2\)</span>)</li>
-<li><span class="math inline">\(\Gamma\)</span>分布 <span class="math inline">\(χ^2\)</span>分布</li>
-<li>n个b(1,p)=b(n,p) n个指数分布Exp(λ)=<span class="math inline">\(\Gamma\)</span>(n,λ)</li>
-</ul></li>
-<li>商(变量变换法)(🚩<strong>例3.18</strong>)</li>
-<li>max,min分布</li>
-<li>🚩<strong>变量变换法</strong>(例3.17) 与二重积分一样</li>
-</ul></li>
-</ul>
-<h5 id="特征">3.5 特征</h5>
-<ul>
-<li>连续变量的特征
-<ul>
-<li>E(ξ)=<span class="math inline">\(\int xp(x)dx\)</span>
-<ul>
-<li>E(f(ξ))=<span class="math inline">\(\int f(x)p(x)dx\)</span></li>
-<li>可加性</li>
-<li>独立可拆乘法</li>
-</ul></li>
-<li>Cov(ξ,η)=E( (ξ-E(ξ))(η-E(η)) )
-<ul>
-<li>可交换</li>
-<li>数乘可提</li>
-<li>加法可拆</li>
-<li>独立 ⇔ Cov=0</li>
-<li>相关系数ρ
-<ul>
-<li>标准化 ξ*=<span class="math inline">\(\frac{ξ-E}{\sqrt{D}}\)</span></li>
-<li>ρ=Cov(ξ<em>,η</em>)=<span class="math inline">\(\frac{Cov(ξ,η)}{\sqrt{D(ξ)·D(η)}}\)</span></li>
-<li>|ρ|=1 完全线性相关(可由线性函数代替)</li>
-<li>ρ=0 不(线性)相关
-<ul>
-<li>正态分布 相关性⇔独立性</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>D(ξ)=E( (ξ-E(ξ))² )=E(ξ²)-E(ξ)²
-<ul>
-<li>数乘可提</li>
-<li>独立可拆加法</li>
-</ul></li>
-<li>切比雪夫不等式 P(|ξ-a|≥ε)≤<span class="math inline">\(\frac{D(ξ)}{ε^2}\)</span>
-<ul>
-<li>离开期望的程度 概率描述</li>
-</ul></li>
-<li>关于a点的k阶矩(不怎么考)</li>
-<li>协方差矩阵(不怎么考)</li>
-</ul></li>
-</ul>
-<h5 id="条件回归">3.6 条件、回归</h5>
-<ul>
-<li>条件(不怎么考)
-<ul>
-<li>条件分布</li>
-<li>条件期望</li>
-</ul></li>
-<li>线性回归(不怎么考)</li>
-</ul>
-<h5 id="特征函数">3.7 特征函数</h5>
-<ul>
-<li>φ(t) = <span class="math inline">\(\int e^{itx}p(x)dx\)</span> =
-E(<span class="math inline">\(e^{itξ}\)</span>)</li>
-<li>常见(要会求)
-<ul>
-<li>单点分布P(ξ=a)=1 φ(t)=<span class="math inline">\(e^{iat}\)</span></li>
-<li>二项分布b(n,p) φ(t)=<span class="math inline">\((pe^{it}+q)^n\)</span></li>
-<li>泊松分布P(λ) φ(t)=<span class="math inline">\(e^{λ(e^{it}-1)}\)</span></li>
-<li>均匀分布u(0~1) φ(t)=<span class="math inline">\(\frac{e^{it}-1}{it}\)</span></li>
-<li>指数分布Exp(λ) φ(t)=<span class="math inline">\((1-\frac{it}{λ})^{-1}\)</span></li>
-<li>(直接记)正态分布N(μ,σ²) φ(t)=<span class="math inline">\(\sqrt{2π}\)</span></li>
-</ul></li>
-<li>运算
-<ul>
-<li><span class="math inline">\(φ_{ax+b}(t)\)</span>=E(<span class="math inline">\(e^{i(ax+b)t}\)</span>)=<span class="math inline">\(e^{ibt}φ(at)\)</span></li>
-<li><strong>(独立求和)</strong><span class="math inline">\(φ_{x+y}(t)=φ_{x}(t)·φ_{y}(t)\)</span></li>
-<li><strong>(k阶矩)</strong><span class="math inline">\(φ^{(k)}(0)=i^{k}E(ξ^k)\)</span></li>
-</ul></li>
-<li>逆转公式
-<ul>
-<li>公式 感觉算不出来</li>
-<li>🚩 <strong>(推论)连续傅里叶逆变换版(感觉会考)</strong>
-<ul>
-<li>条件:特征积分绝对收敛(<span class="math inline">\(\int_{-∞}^{+∞}|φ(t)|dt&lt;+∞\)</span>)</li>
-<li>p(x)=<span class="math inline">\(\frac{1}{2π}\)</span><span class="math inline">\(\int_{-∞}^{+∞}e^{-itx}φ(t)dt\)</span></li>
-<li>恰好和φ(t)=<span class="math inline">\(\int
-e^{itx}p(x)dx\)</span>构成一对变换</li>
-</ul></li>
-<li>唯一性 特征函数⇔分布函数</li>
-</ul></li>
-</ul>
-<h5 id="大数定律">4.1 大数定律</h5>
-<p>n→∞时, P(…&lt;ε)=1的情况</p>
-<ul>
-<li>(特例)伯努利定理
-<ul>
-<li>n重伯努利事件A的发生次数<span class="math inline">\(μ_n\)</span></li>
-<li><span class="math inline">\(P(|\frac{μ_n}{n}-p|&lt;ε)=1\)</span></li>
-<li>依概率收敛 <span class="math inline">\(\frac{μ_n}{n}\stackrel{P}{\rightarrow}p\)</span></li>
-</ul></li>
-<li>(条件弱)切比雪夫大数定理
-<ul>
-<li>条件: 两两不相关 方差有界</li>
-<li><span class="math inline">\(\frac{\sum
-ξ_i}{n}\stackrel{P}{\rightarrow}\frac{\sum E(ξ_i)}{n}\)</span></li>
-<li>含义: 随机变量序列的均值收敛于它的期望</li>
-</ul></li>
-<li>(条件更弱)马尔可夫大数定律
-<ul>
-<li>条件: <span class="math inline">\(\frac{1}{n^2}D(\sum
-ξ_i^2)\)</span>→0</li>
-<li><span class="math inline">\(\frac{\sum
-ξ_i}{n}\stackrel{P}{\rightarrow}\frac{\sum E(ξ_i)}{n}\)</span></li>
-</ul></li>
-<li>(无方差要求)辛钦大数定律
-<ul>
-<li>条件: 独立同分布 记期望a</li>
-<li><span class="math inline">\(\frac{\sum
-ξ_i}{n}\stackrel{P}{\rightarrow}a\)</span></li>
-<li>注: 结论都类似, 但是条件是另一个方向</li>
-</ul></li>
-</ul>
-<h5 id="收敛性">4.2 收敛性</h5>
-<ul>
-<li>依概率收敛(可推出弱收敛)</li>
-<li>弱收敛(按分布收敛) 在每个连续点收敛</li>
-<li>依概率收敛于常数 ⇔ 分布函数列弱收敛于退化分布</li>
-<li><span class="math inline">\(\{F_n(x)\}\)</span>弱收敛于<span class="math inline">\(F(x)\)</span> ⇔ <span class="math inline">\(\{φ_n(t)\}\)</span>收敛于<span class="math inline">\(φ(t)\)</span></li>
-</ul>
-<h5 id="中心极限独立同分布">4.3 中心极限(独立同分布)</h5>
-<p>由大数定律知道随机变量列均值收敛后, 继续研究服从什么分布</p>
-<ul>
-<li>莱维定理
-<ul>
-<li>条件: 独立同分布</li>
-<li>原理: 随机变量和<span class="math inline">\(∑Xi\sim
-N(nμ，nσ^2)\)</span>, 进行标准化</li>
-</ul></li>
-<li>(Levi-Lindeberg的B(1,p)情况)拉普拉斯定理
-<ul>
-<li>条件: <span class="math inline">\(X_i \sim B(n,p)\)</span></li>
-</ul></li>
-</ul>
-<h5 id="中心极限独立非同分布">4.4 中心极限(独立非同分布)*</h5>
+<hr />
+<p><em>＋代表考点的显著性(出现在卷子上几次)</em>
+<em>🤔代表需要额外思考的内容</em> <em>😋代表比较奇怪的点</em></p>
 </body>
 </html>
